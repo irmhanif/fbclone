@@ -18,13 +18,12 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
 import HeaderIcon from "./HeaderIcon";
-import { TABS } from "./constants";
-import { signOut, useSession } from "next-auth/client";
+import { TABS, session } from "./constants";
+import { signOut, useSession } from "next-auth/react";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 
 function Header() {
-  const [session] = useSession();
   const [activeTab, setActiveTab] = useState("Home");
   const options = [
     { value: "Logout", className: "myOptionClassName", onClick: signOut },
@@ -98,13 +97,13 @@ function Header() {
         <Image
           onClick={signOut}
           className='rounded-full cursor-pointer'
-          src={session.user.image}
+          src={session?.user?.image}
           width='40'
           height='40'
           layout='fixed'
         />
         <p className='font-semibold pr-3 whitespace-nowrap'>
-          {session.user.name}
+          {session?.user?.name}
         </p>
 
         <ViewGridIcon className='icon' />

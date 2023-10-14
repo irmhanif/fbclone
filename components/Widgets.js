@@ -3,13 +3,12 @@ import {
   SearchIcon,
   VideoCameraIcon,
 } from "@heroicons/react/outline";
-import { useSession } from "next-auth/client";
-import { contacts } from "./constants";
+import { useSession } from "next-auth/react";
+import { contacts, session } from "./constants";
 import Contact from "./Contact";
 
 function Widgets() {
-  const [session] = useSession();
-
+ // const [session] = useSession();
   return (
     <div className='hidden lg:flex flex-col w-60 p-2 mt-5'>
       <div className='flex justify-between items-center text-gray-500 mb-5'>

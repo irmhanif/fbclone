@@ -5,14 +5,16 @@ import {
   EmojiHappyIcon,
   VideoCameraIcon,
 } from "@heroicons/react/outline";
-import { useSession } from "next-auth/client";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { db, storage } from "../../firebase";
 import firebase from "firebase";
+import { session } from "../constants";
 
 function InputBox() {
-  const [session] = useSession();
+  // const [session] = useSession();
+  
   const inputRef = useRef(null);
   const filePicker = useRef(null);
   const [imageToPost, setImageToPost] = useState(null);
@@ -23,9 +25,9 @@ function InputBox() {
     db.collection("posts")
       .add({
         message: inputRef.current.value,
-        name: session.user.name,
-        email: session.user.email,
-        image: session.user.image,
+        name: session?.user?.name,
+        email: session?.user?.email,
+        image: session?.user?.image,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       })
       .then((doc) => {
@@ -82,7 +84,7 @@ function InputBox() {
       <div className='flex space-x-4 p-4 items-center'>
         <Image
           className='rounded-full'
-          src={session.user.image}
+          src={session?.user?.image}
           width={40}
           height={40}
           layout='fixed'
@@ -92,7 +94,7 @@ function InputBox() {
             type='text'
             ref={inputRef}
             className='rounded-full h-12 bg-gray-200 flex-grow px-5 focus:outline-none'
-            placeholder={`What's on your mind, ${session.user.name}?`}
+            placeholder={`What's on your mind, ${session?.user?.name}?`}
           />
           <button hidden onClick={sendPost} type='submit'>
             Submit
