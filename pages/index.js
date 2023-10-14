@@ -6,6 +6,8 @@ import SideBar from "../components/SideBar";
 import Widgets from "../components/Widgets";
 import { db } from "../firebase";
 import { getSession } from "next-auth/react";
+import 'styled-jsx/style';
+
 export default function Home({ session, posts }) {
   return (
     <div className='h-screen bg-gray-100 overflow-hidden'>
