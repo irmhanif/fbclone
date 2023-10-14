@@ -53,7 +53,6 @@ function Header() {
             type='text'
             name='Facebook'
             placeholder='Search Facebook'
-            autoComplete={false}
             className='hidden font-sans md:inline-flex flex-shrink ml-2 outline-none placeholder-gray-500 items-center bg-transparent'
           />
         </div>
