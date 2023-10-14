@@ -56,34 +56,34 @@ export const SIDE_BAR = [
 export const stories = [
   {
     name: "Elon Musk",
-    src: "https://links.papareact.com/4zn",
-    profile: "https://links.papareact.com/kxk",
+    src: "https://picsum.photos/400/300",
+    profile: "https://picsum.photos/400/300",
   },
   {
     name: "Jeff Bezoz",
-    src: "https://links.papareact.com/k2j",
-    profile: "https://links.papareact.com/f0p",
+    src: "https://picsum.photos/400/300",
+    profile: "https://picsum.photos/400/300",
   },
   {
     name: "Mark Zuckerberg",
-    src: "https://links.papareact.com/xql",
-    profile: "https://links.papareact.com/snf",
+    src: "https://picsum.photos/400/300",
+    profile: "https://picsum.photos/400/300",
   },
   {
     name: "Bill Gates",
-    src: "https://links.papareact.com/4u4",
-    profile: "https://links.papareact.com/zvy",
+    src: "https://picsum.photos/400/300",
+    profile: "https://picsum.photos/400/300",
   },
 ];
 
 export const contacts = [
-  { src: "https://links.papareact.com/f0p", name: "Jeff Bezoz" },
-  { src: "https://links.papareact.com/kxk", name: "Elon Musk" },
-  { src: "https://links.papareact.com/zvy", name: "Bill Gates" },
-  { src: "https://links.papareact.com/snf", name: "Mark Zuckerberg" },
-  { src: "https://links.papareact.com/d0c", name: "Harry Potter" },
-  { src: "https://links.papareact.com/6gg", name: "The Queen" },
-  { src: "https://links.papareact.com/r57", name: "James Bond" },
+  { src: "https://picsum.photos/400/300", name: "Jeff Bezoz" },
+  { src: "https://picsum.photos/400/300", name: "Elon Musk" },
+  { src: "https://picsum.photos/400/300", name: "Bill Gates" },
+  { src: "https://picsum.photos/400/300", name: "Mark Zuckerberg" },
+  { src: "https://picsum.photos/400/300", name: "Harry Potter" },
+  { src: "https://picsum.photos/400/300", name: "The Queen" },
+  { src: "https://picsum.photos/400/300", name: "James Bond" },
 ];
 
 export const session = {

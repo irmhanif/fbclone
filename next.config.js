@@ -8,7 +8,8 @@ module.exports = {
       "cdn-icons-png.flaticon.com",
       "scontent.fcjb3-3.fna.fbcdn.net",
       "static.xx.fbcdn.net",
-      "scontent.fixm4-3.fna.fbcdn.net"
+      "scontent.fixm4-3.fna.fbcdn.net",
+      "picsum.photos"
     ]
   }
 }
